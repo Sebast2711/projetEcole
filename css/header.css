@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header .brand img {
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav {
+    justify-content: space-between;
+}
+
+header ul {
+    list-style: none;
+    align-items: center;
+}
+
+header ul li {
+    margin: 0px 1.5em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color : black;
+}
+
+.menu li a , .login-signup li a{
+    margin: 0px 2em;
+    font-size: 1.5em;
+}
+
+.page-selected {
+    text-decoration: underline 5px solid #0072FF;
+}
