@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .discover {
     background:url("../img/university-library.jpg") no-repeat;
     background-size: cover ;
@@ -9,11 +13,55 @@
 }
 
 .shadow-bg {    
-    background-color:  rgba(4, 0, 4, 0.47);
+    background-color: rgba(4, 0, 4, 0.4);;
     width: 100%;
     height: 100%;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.discover h2{
+    color: white;
+    font-size: 2em;
+}
+
+.news h2  {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em;
+}
+
+.cards {
+    width: 75%;
+    margin: 1em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+
+.card {
+    margin: 1rem 1rem;
+    background-color: white;
+    box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.3);
+}
+
+.card-info {
+    padding: 0.5em;
+    background-color: #0072FF;
+    color: white;
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+}
+
+.card-title{
+    margin: 1rem;
+}
+
+.card-desc {
+    margin: 1rem;
 }

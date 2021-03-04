@@ -14,22 +14,26 @@ header .brand img {
     flex-direction: row;
 }
 
-header nav {
+ nav {
     justify-content: space-between;
 }
 
-header ul {
+ ul {
     list-style: none;
     align-items: center;
 }
 
-header ul li {
+ ul li {
     margin: 0px 1.5em;
 }
 
-header ul li a {
+ ul li a {
     text-decoration: none;
     color : black;
+}
+
+ul li a:focus{
+    outline: none;
 }
 
 .menu li a , .login-signup li a{
