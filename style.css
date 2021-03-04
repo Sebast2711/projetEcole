@@ -1,0 +1,99 @@
+/* Couleurs */
+
+/* index.php */
+
+/* header des cartes et souligne de accueil #0072FF */
+/* #040004 47% Au dessus de l'image*/
+/* footer #C4C4C4 */
+
+
+/* contact.php, inscription.php, connexion.php */
+
+/* bouton primary et souligne de accueil #0072FF */
+/* secondary #0ED2F7 */
+/* textarea placeholder #A4A0A0 */
+/* footer #C4C4C4 */
+
+
+/* espaceprofesseur.php, espaceetudiant.php */
+h
+/* souligne de accueil #0072FF */
+/* case de tableau 2n+1 #0072FF 20%*/
+/* footer #C4C4C4 */
+
+
+/* Bouton 1 */
+
+.btn-grad {background-image: linear-gradient(to right, #1c92d2 0%, #f2fcfe  51%, #1c92d2  100%)}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+         
+
+
+
+
+/* Bouton 2 */
+.btn-grad {background-image: linear-gradient(to right, #B2FEFA 0%, #0ED2F7  51%, #B2FEFA  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
+
+
+
+
+/* Bouton 3 */
+
+ .btn-grad {background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%)}
+ .btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
