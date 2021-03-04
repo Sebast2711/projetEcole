@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 header .brand img {
     width: 7rem;
     height: 7rem;
@@ -42,5 +46,6 @@ ul li a:focus{
 }
 
 .page-selected {
-    text-decoration: underline 5px solid #0072FF;
+    border-bottom: 5px solid #0072FF ;
+    /* text-decoration: underline 5px solid #0072FF; */
 }

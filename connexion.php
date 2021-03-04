@@ -6,35 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
 
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/connexion.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/connexion.css">
 
 </head>
 <body>
 
 
-<header>
-    <nav class="navigation flex-row">
-        <div class="brand">
-            <img id="brand-logo" src="../img/bear-logo.jpg" alt="logo-bear">
-        </div>
-                
-        <ul class="menu flex-row">
-            <li><a href="../index.php"> Accueil </a></li>
-            <li><a href="./espace.php"> Espace Etudiant </a></li>
-            <li><a href="./contact.php"> Contact </a></li>
-        </ul>
+<?php
+    require_once 'header.php';
+?>
 
-        <ul class = "login-signup flex-row">
-            <li><a href="" class = "page-selected">Connexion</a></li>
-            <li><a href="./inscription.php">Inscription</a></li>
-        </ul>
-    </nav>
-</header>  
+<?php
+    if (isset($_SESSION['user'])){
+        header('location:index.php');
+    }
+?>
 
-
-
+        
 <form action="auth.php" method="POST">
 
         <div class="mail-mdp">
@@ -74,6 +64,9 @@
 
 </footer>
 
+<?php
+    require_once 'footer.php';
+?>
 
 </body>
 </html>

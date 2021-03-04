@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,24 +17,9 @@
 </head>
 <body>
 
-<header>
-    <nav class="navigation flex-row">
-        <div class="brand">
-            <img id="brand-logo" src="./img/bear-logo.jpg" alt="logo-bear">
-        </div>
-                
-        <ul class="menu flex-row">
-            <li><a href="" class = "page-selected"> Accueil </a></li>
-            <li><a href="./php/espace.php"> Espace Etudiant </a></li>
-            <li><a href="./php/contact.php"> Contact </a></li>
-        </ul>
-
-        <ul class = "login-signup flex-row">
-            <li><a href="./php/connexion.php">Connexion</a></li>
-            <li><a href="./php/inscription.php">Inscription</a></li>
-        </ul>
-    </nav>
-</header>    
+<?php
+    include_once 'header.php';
+?>
 
 
 <main>
@@ -200,6 +181,9 @@
 
 </footer>
 
+<?php
+    require_once 'footer.php';
+?>
 
 
 

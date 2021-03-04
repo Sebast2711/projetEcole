@@ -6,33 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
 
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/inscription.css">
     
 
 </head>
 <body>
 
 
-<header>
-    <nav class="navigation flex-row">
-        <div class="brand">
-            <img id="brand-logo" src="../img/bear-logo.jpg" alt="logo-bear">
-        </div>
-                
-        <ul class="menu flex-row">
-            <li><a href="../index.php"> Accueil </a></li>
-            <li><a href="./espace.php"> Espace Etudiant </a></li>
-            <li><a href="./contact.php"> Contact </a></li>
-        </ul>
-
-        <ul class = "login-signup flex-row">
-            <li><a href="./connexion.php" >Connexion</a></li>
-            <li><a href="" class = "page-selected">Inscription</a></li>
-        </ul>
-    </nav>
-</header>  
+<?php
+    include_once 'header.php';
+    if (isset($_SESSION['user'])){
+        header('location:index.php');
+    }
+?>
 
 <form action="" method="post">
 <div class="nom-prenom">
@@ -97,6 +85,9 @@
 
 </footer>
 
+<?php
+    require_once 'footer.php';
+?>
 
 </body>
 </html>
