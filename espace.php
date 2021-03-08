@@ -1,7 +1,7 @@
 <?php
     include_once 'header.php';
     if (!isset($_SESSION['user'])){
-        header('location:index.php');
+        header('location:connexion.php');
     }
 ?>
 
@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/espace.css">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 
@@ -32,10 +33,12 @@
     if ($_SESSION['user']['type'] == 0) {
         require_once 'open-bdd.php';
 
-        $sqlReq = "SELECT cours.nom, N.date, N.note FROM note as N INNER JOIN cours ON N.id_cours = cours.id INNER JOIN membre ON N.id_eleve = membre.id WHERE membre.email = '". $_SESSION['user']['mail'] ."' ORDER BY cours.nom, N.date DESC ;";
+        $sqlReq = "SELECT cours.nom, N.date, N.note FROM notes as N INNER JOIN cours ON N.id_cours = cours.id INNER JOIN membre ON N.id_eleve = membre.id WHERE membre.email = '". $_SESSION['user']['mail'] ."' ORDER BY cours.nom, N.date ;";
         $req = $bdd->query($sqlReq);
         $req->execute();
         $reponse = $req->fetchAll(); 
+        $req->closeCursor();
+
 
         echo "<table>";
         echo "<thead>
@@ -49,7 +52,6 @@
             echo "</tr>";
         }
         echo "</table>";
-        $req->closeCursor();
     }
 
          
@@ -57,11 +59,19 @@
     if ($_SESSION['user']['type'] == 1) {
         require_once 'open-bdd.php';
 
-        $sqlReq = "SELECT M2.nom, M2.prenom, N.date, N.note FROM note as N INNER JOIN cours_prof ON N.id_cours = cours_prof.id_cours INNER JOIN membre ON cours_prof.id_prof = membre.id INNER JOIN membre as M2 ON N.id_eleve = M2.id WHERE membre.email = '".$_SESSION['user']['mail']."' ;";
+        $sqlReq = "SELECT M2.nom, M2.prenom, N.date, N.note FROM notes as N 
+        INNER JOIN cours_prof ON N.id_cours = cours_prof.id_cours 
+        INNER JOIN membre ON cours_prof.id_prof = membre.id 
+        INNER JOIN membre as M2 ON N.id_eleve = M2.id 
+        WHERE membre.email = '".$_SESSION['user']['mail']."' ;";
+
         $req = $bdd->query($sqlReq);
         $req->execute();
         $reponse = $req->fetchAll(); 
+        $req->closeCursor();
         
+        // if ($reponse == false){}
+
         echo "<table>";
         echo "<thead>
                 <tr>
@@ -85,24 +95,6 @@
 ?>
 
 
-
-<footer class = "flex-row">
-    <div class="adresse-copyright">
-        <div class="adresse">
-            <p>124 Avenue de Stalingrad</p>
-            <p>92700 Colombes</p>
-        </div>
-    
-        &copy;Sébastien OILLO
-    </div>
-    
-    <ul class = "menu flex-row">
-        <li><a href="" > Accueil </a></li>
-        <li><a href="./php/espace.php"> Espace Etudiant </a></li>
-        <li><a href="./php/contact.php"> Contact </a></li>
-    </ul>        
-
-</footer>
 
 <?php
     require_once 'footer.php';

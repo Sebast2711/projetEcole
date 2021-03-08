@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/footer.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 
 </head>
 <body>
@@ -162,24 +164,6 @@
 </main>
 
 
-
-<footer class = "flex-row">
-    <div class="adresse-copyright">
-        <div class="adresse">
-            <p>124 Avenue de Stalingrad</p>
-            <p>92700 Colombes</p>
-        </div>
-    
-        &copy;Sébastien OILLO
-    </div>
-    
-    <ul class = "menu flex-row">
-        <li><a href="" > Accueil </a></li>
-        <li><a href="./php/espace.php"> Espace Etudiant </a></li>
-        <li><a href="./php/contact.php"> Contact </a></li>
-    </ul>        
-
-</footer>
 
 <?php
     require_once 'footer.php';

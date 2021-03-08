@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Contact</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/inscription.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/inscription.css">
-    
+   
 
 </head>
 <body>
@@ -32,10 +34,15 @@
         <input type="text" name = "prenom" id ="prenom" >    
     </div>
 </div>
-    
+
 <div class="mail flex">
-    <label for="mail">Objet</label>
+    <label for="mail">Adresse Email</label>
     <input type="email" name="mail" id="mail" >
+</div>
+
+<div class="objet flex">
+    <label for="objet">Objet</label>
+    <input type="text" name="objet" id="objet" >
 </div>
 
 
@@ -55,23 +62,6 @@
 
 
 
-    <footer class = "flex-row">
-    <div class="adresse-copyright">
-        <div class="adresse">
-            <p>124 Avenue de Stalingrad</p>
-            <p>92700 Colombes</p>
-        </div>
-    
-        &copy;Sébastien OILLO
-    </div>
-    
-    <ul class = "menu flex-row">
-        <li><a href="" > Accueil </a></li>
-        <li><a href="./espace.php"> Espace Etudiant </a></li>
-        <li><a href="./contact.php"> Contact </a></li>
-    </ul>        
-
-</footer>
 
 <?php
     require_once 'footer.php';

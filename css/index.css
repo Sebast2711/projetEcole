@@ -25,6 +25,7 @@ body{
 .discover h2{
     color: white;
     font-size: 2em;
+    text-align: center;
 }
 
 .news h2  {
@@ -34,7 +35,7 @@ body{
 }
 
 .cards {
-    width: 75%;
+    width: 90%;
     margin: 1em auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -64,4 +65,16 @@ body{
 
 .card-desc {
     margin: 1rem;
+}
+
+@media (max-width:599px){
+    .cards {
+        grid-template-columns: 1fr !important ;
+    }
+}
+
+@media (max-width:1200px){
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
 }
