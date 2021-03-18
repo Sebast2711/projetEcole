@@ -51,8 +51,6 @@ if (isset($_SESSION['user'])){
 
 else {
 
-// supprimer des ancres si l'utilisateur n'est pas connecté
-
     echo '
     
 <header>

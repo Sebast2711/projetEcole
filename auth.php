@@ -2,6 +2,7 @@
 session_start();
 
 
+
 require_once 'open-bdd.php';
 
 
@@ -30,11 +31,13 @@ $req->execute();
 // $reponse = $req->fetchAll(); 
 
 $reponse = $req->fetch();
+$req->closeCursor ();
 
 
 
 if (count($reponse) != 0){    
     if ($mail == $reponse['email'] && $mdp == $reponse['mdp']){
+
         $_SESSION['user'] = [
             "id" => $reponse['id'],
             "nom" => $reponse['nom'],
@@ -44,6 +47,7 @@ if (count($reponse) != 0){
             "type" => $reponse ['type'],
             "genre" => $reponse['genre']
         ];
+        
         // Reussite ==> Redirection vers verifie.php 
         header('location:index.php');
 
@@ -61,6 +65,6 @@ else {
 }
 
 
-$req->closeCursor ();
+
 
 ?>

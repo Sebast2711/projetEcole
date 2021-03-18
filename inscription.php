@@ -23,9 +23,16 @@
     if (isset($_SESSION['user'])){
         header('location:index.php');
     }
+
+    // Si il y a deja un mail correspondant à l'entrée de l'utilasateur alors pas d'enregistrement et affiche un message d'erreur 
+    if(isset($_GET['dejainscrit'])){
+        if ($_GET['dejainscrit'] === "coucou"){
+            echo 'test qui marche';
+        }   
+    }
 ?>
 
-<form action="" method="post">
+<form action="auth_insc.php" method="post">
 <div class="nom-prenom">
     <div class="nom flex">
         <label for="nom">Nom</label>
